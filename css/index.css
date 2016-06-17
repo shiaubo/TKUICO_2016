@@ -1,0 +1,43 @@
+
+
+
+.modal-header,.modal-footer{
+	background: rgba(51, 122, 183, 0.38);
+}
+
+#contentmo{
+	position:relative;
+	margin-top: 230px;
+
+}
+#selectline1{
+	margin-left:6%;
+	width:22%;
+	display:inline-block;
+
+}
+#selectline2{
+	margin-left:4%;
+	width:44%;
+	display:inline-block;
+
+}
+#selectline3{
+	margin-left:35px; 
+	width:70%;
+	display:inline-block;
+
+}
+#selectline4{
+	margin-left:35px;
+	width:70%;
+	display:inline-block;
+
+}
+.row{
+    margin-right: 15px;
+    margin-left: 15px;
+
+
+}
+

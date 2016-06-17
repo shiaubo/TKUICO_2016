@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<!--
+	Transit by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Information Consultant Organization</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/init.js"></script>
+		<script src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
+		<script src="js/bootstrap.js"></script>
+		 <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-xlarge.css" />		
+		</noscript>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/index.css" />
+		<link rel="Shortcut Icon" type="image/x-icon" href="images/titleicon.ico" />
+		<script>
+				$(function () {
+
+		           $('a.page-scroll').click(function() {
+
+		               var target = $(this.hash);
+
+		               $('html,body').animate({
+
+		                   scrollTop: target.offset().top
+
+		               }, 500);
+
+		               return false;
+
+		           });});
+				$('#myModal').on('shown.bs.modal', function () {
+  				$('#myInput').focus()
+				});
+
+
+				function messageGo(){
+				  var name = $('#name').val(); 
+				  var teachid = $('#teachid').val();
+				  var room = $('#room').val();
+				  var location = $('#location').val();                                           
+
+				    $.ajax({
+				        url:"computer.php", 
+
+				        data:"&name="+name+"&teachid="+teachid+"&room="+room+"&location="+location,    
+				        type : "POST",
+				        dataType:'json' ,
+				        complete:function(){
+
+				        alert("\nWe hava received your request\n");
+
+				        },
+
+				    }); 
+
+				};
+			</script>
+
+	</head>
+	<body class="landing">
+
+
+		<!-- Header -->
+			<nav class="navbar navbar-default navbar-fixed-top">
+			  <div class="container-fluid">
+			    <!-- Brand and toggle get grouped for better mobile display -->
+			    <div class="navbar-header page-scroll">
+			      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			      </button>
+			      <a class="navbar-brand">TKUICO</a>
+			      <img src="images/box.gif" >
+			    </div>
+
+			    <!-- Collect the nav links, forms, and other content for toggling -->
+			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			      <ul class="nav navbar-nav">
+			      
+			      </ul>
+			      <ul class="nav navbar-nav navbar-right">
+			        <li><a href="index.html">Home</a></li>
+					<li><a href="#one" class="page-scroll">ICO Events</a></li> 
+                    <li><a href="#two" class="page-scroll">Members of ICO</a></li>
+					<li><a href="#regform" class="page-scroll">Sign Up</a></li>
+			      </ul>
+			    </div><!-- /.navbar-collapse -->
+			  </div><!-- /.container-fluid -->
+			</nav>
+		
+				
+			</header>
+
+
+
+		<!-- Banner -->
+			<section id="banner">
+				<h2>Welcome to TKUICO</h2>
+
+				<p>A perfect place for all students.</p>
+				<ul class="actions">
+					<li>
+						<a href="#regform" class="page-scroll"><Button class="button big">Sign Up Now</Button></a>
+						
+					</li>
+				</ul>
+				 <div class="container" style=" opacity:0; ">  
+						<div id='loading'><img src="images\gears.gif" ></div></div>
+			</section>
+
+
+
+		<!-- One -->
+			<section id="one" class="wrapper style1 special">
+				<div class="container">
+					<header class="major">
+						<h2>ICO EVENTS</h2>
+						
+					</header>
+					<div class="row 150%">
+						<div class="4u 12u$(medium)">
+
+							<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							  <div class="modal-dialog" role="document">
+							    <div class="modal-content">
+							      <div class="modal-header">
+							        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							         <span aria-hidden="true" style="font-size: 250%">&times;</span>
+							        </button>
+							        <h1 class="modal-title" id="myModalLabel">Activities</h1>
+							      </div>
+							      <div class="modal-body">
+							      
+							      	<p style="text-align: left;font-size: 24px;font-style: bold;">Speech<br></p>
+									<p style="text-align: left;font-size: 18px;">&nbsp;&nbsp;&nbsp;&nbsp;ICO will invites outstanding programmer to share their experiences! Any students are welcome for free!</p><br>
+									
+									<p style="text-align: left;font-size: 24px;font-style: bold;">HackTKU</p><br>
+									<p style="text-align: left;font-size: 18px;">&nbsp;&nbsp;&nbsp;&nbsp;ICO will held a Hackathon event once a year. We welcome every university student to compete and win the rewards!</p><br>
+									<p style="text-align: left;font-size: 24px;font-style: bold;">Institution visit</p><br>
+									<p style="text-align: left;font-size: 18px;">&nbsp;&nbsp;&nbsp;&nbsp;ICO will held an institution visit to Companies like Microsoft or Mozilla. We welcome every Tamkang student to join us.</p><br>
+								
+							     
+							       
+
+							      </div>
+							      <div class="modal-footer">
+							        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							        
+							      </div>
+							    </div>
+							  </div>
+							</div>
+							<section class="box" >
+								<i><button style="background:white;border: 0px"type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal1"><img  src = "images/activities.png" height="128" width="128" ></button></i>
+								<h3>Activities</h3>
+								<p>ICO provides several high quality activities for all students in TKU.</p>
+							</section>
+
+						</div>
+						<div class="4u 12u$(medium)">
+							<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							  <div class="modal-dialog" role="document">
+							    <div class="modal-content">
+							      <div class="modal-header">
+							        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							          <span aria-hidden="true" style="font-size: 250%">&times;</span>
+							        </button>
+							        <h1 class="modal-title" id="myModalLabel">Courses</h1>
+							      </div>
+							      <div class="modal-body">
+							      
+							      	<p style="text-align: left;font-size: 24px;font-style: bold;">Basic programing language courses:<br></p>
+									<p style="text-align: left;font-size: 18px;">&nbsp;&nbsp;&nbsp;&nbsp;C<br></p>
+									<p style="text-align: left;font-size: 18px;">&nbsp;&nbsp;&nbsp;&nbsp;Java</p><br>
+									<p style="text-align: left;font-size: 18px;">&nbsp;&nbsp;&nbsp;&nbsp;Python</p><br>
+									<p style="text-align: left;font-size: 18px;">&nbsp;&nbsp;&nbsp;&nbsp;Swift</p><br>
+									<p style="text-align: left;font-size: 24px;font-style: bold;">Basic Data base courses:</p><br>
+									<p style="text-align: left;font-size: 18px;">&nbsp;&nbsp;&nbsp;&nbsp;SQL Server</p><br>
+									<p style="text-align: left;font-size: 24px;font-style: bold;">Computer repairing courses:</p><br>
+									<p style="text-align: left;font-size: 18px;">&nbsp;&nbsp;&nbsp;&nbsp;Laptop</p><br>
+									<p style="text-align: left;font-size: 18px;">&nbsp;&nbsp;&nbsp;&nbsp;PC</p><br>
+									<p style="text-align: left;font-size: 24px;font-style: bold;">Application development courses:</p><br>
+									<p style="text-align: left;font-size: 18px;">&nbsp;&nbsp;&nbsp;&nbsp;Apple ios</p><br>
+									<p style="text-align: left;font-size: 18px;">&nbsp;&nbsp;&nbsp;&nbsp;Android</p><br>
+							     
+							       
+
+							      </div>
+							      <div class="modal-footer">
+							        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							        
+							      </div>
+							    </div>
+							  </div>
+							</div>
+							<section class="box">
+								<i><button style="background:white;border: 0px"type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal2"><img src = "images/cours.png" height="128" width="128"></button></i>
+								<h3>Courses</h3>
+								<p>ICO provides basic programing courses for free to all students in TKU.</p>
+							</section>
+						</div>
+						<div class="4u$ 12u$(medium)">
+							<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							  <div class="modal-dialog" role="document">
+							    <div  id="contentmo" class="modal-content">
+							      <div class="modal-header">
+							        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							          <span aria-hidden="true" style="font-size: 250%">&times;</span>
+							        </button>
+							        <h1 class="modal-title" id="myModalLabel">Computer Repairment</h1>
+							      </div>
+							      <div class="modal-body">
+
+							    <form action = "" name ="repairform" method="Post">
+							    <div id="selectline3">
+								<input name="name" id="name" value="" placeholder="Name" type="text" ><br>
+								</div>
+								
+								<div id="selectline4">
+								<input name="teachid" id="teachid" value="" placeholder="Teacher ID" type="text"><br>
+								</div>
+								
+							    <div id="selectline1">
+								<select name="room" id="room" value="" placeholder="Room" >
+								<option value="R0">Building Code</option><!----PHP 小於0時不通過---->
+								<option value="A">A</option>
+								<option value="B">B</option>
+								<option value="C">C</option>
+								<option value="CL">CL</option>
+								<option value="D">D</option>
+								<option value="E">E</option>
+								<option value="ED">ED</option>
+								<option value="F">F</option>
+								<option value="FL">FL</option>
+								<option value="G">G</option>
+								<option value="H">H</option>
+								<option value="I">I</option>
+								<option value="J">J</option>
+								<option value="L">L</option>
+								<option value="M">M</option>
+								<option value="N">N</option>
+								<option value="O">O</option>
+								<option value="Q">Q</option>
+								<option value="R">R</option>
+								<option value="S">S</option>
+								<option value="SG">SG</option>
+								<option value="T">T</option>
+								<option value="U">U</option>
+								<option value="V">V</option>
+								<option value="Z">Z</option>
+								</select>
+								</div>
+							    <div id="selectline2">
+								<input name="location" id="location" value="" placeholder="Location" type="text">
+								</div>
+								</form>
+								
+								
+							
+							       
+
+							      </div>
+							      <div class="modal-footer">
+							      <input type="button" class="btn btn-secondary" data-dismiss="modal" value="Send" type="submit" onclick="messageGo();"/>
+							       
+							        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							      </div>
+							    </div>
+							  </div>
+							</div>
+							<section class="box">
+								<i><button style="background:white;border: 0px" type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal3"><img src = "images/repair.png" height="128" width="128"></button></i>
+								<h3>Computer Repairment</h3>
+								<p>ICO provides computer repairment for free to teachers in TKU.</p>
+							</section>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		<!-- Two -->
+			<section id="two" class="wrapper style2 special">
+				<div class="container">
+					<header class="major">
+						<h1 style="font-size: 50px;font-weight:bold;">Members of ICO</h1>
+						<p>None of us is as smart as all of us.</p>
+					</header>
+					<section class="profiles">
+					
+						<div class="row">
+						
+							
+							<section class="3u 6u(medium) 12u$(xsmall) profile">
+								<a href = "https://www.facebook.com/yuchuang.tsai"><img src="images/tsai.jpg" alt="" /></a>
+								<h4>Yu-Chuang Tsai</h4>
+								<p>ICO Director</p>
+							</section>
+
+							<section class="3u 6u(medium) 12u$(xsmall) profile">
+								<a href = "https://www.facebook.com/ChenBoLin"><img src="images/chen.jpg" alt="" /></a>
+								<h4>Bo-Lin Chen</h4>
+								<p>ICO Vice Director</p>
+							</section>
+							<section class="3u$ 6u$(medium) 12u$(xsmall) profile">
+								<a href = "https://www.facebook.com/adrian.wu.16"><img src="images/wu.jpg" alt="" /></a>
+								<h4>Yuan-Chien Wu</h4>
+								<p>ICO Vice Director</p>
+							</section>
+							<section class="3u 6u(medium) 12u$(xsmall) profile">
+								<a href = "https://www.facebook.com/profile.php?id=100002484872707"><img src="images/handsome.jpg" alt="" /></a>
+								
+								<h4>Hong-Ru Shih</h4>
+								<p>ICO Technical Service Manager</p>
+							</section>
+							<section class="3u 6u(medium) 12u$(xsmall) profile">
+								
+							</section>
+							
+							<section class="3u 6u(medium) 12u$(xsmall) profile">
+								<a href = "https://www.facebook.com/hsujenwei83"><img src="images/hsu.jpg" alt="" /></a>
+								<h4>Jen-Wei Hsu</h4>
+								<p>ICO Public Relation</p>
+							</section>
+							
+						
+						</div>
+					</section>
+
+					<footer>
+						<p style="font-size: 50px">Recruitment</br>We are looking for new blood!</p>
+						
+						<ul class="actions">
+							<li><div class="4u$ 12u$(medium)">
+							<div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							  <div class="modal-dialog" role="document">
+							    <div  id="contentmo" class="modal-content">
+							      <div class="modal-header">
+							        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							          <span aria-hidden="true" style="font-size: 250%">&times;</span>
+							        </button>
+							        <h1 class="modal-title" id="myModalLabel">ICO Recruitment</h1>
+							      </div>
+							      <div class="modal-body">
+
+							    
+							   <a href="https://www.facebook.com/profile.php?id=100002484872707"><img src="images/hr.png" ></a> 
+							   <h4>Please click the icon to contact our human resourse to join ICO</h4>
+							      
+							      <div class="modal-footer">
+							      
+							       
+							        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+								
+							      </div>
+							    </div>
+							  </div>
+							</div>
+							</div>
+							</div>
+								<i><button style="background:white;border: 0px" type="button"  data-toggle="modal" data-target="#myModal4"><img   src="images/Join us.png" style="margin-top: -100px" ></button></i>
+								<h3>Join Us!</h3>
+							
+					</footer>
+				</div>
+			</section>
+				
+
+		<!-- Three -->
+			<section id="regform" class="wrapper style3 special">
+				<div class="container">
+					<header class="major">
+						<h2>Sign Up Now!</h2>
+						<p>Attend ICO event with several simple steps! All your personal information will only use for administrative purposes.</p>
+					</header>
+				</div>
+				
+				<div class="container 50%">
+					<form action="sign-up.php" method="post">
+						
+						<div class="row uniform">
+							<div class="6u 12u$(small)">
+								<input name="name" id="name" value="" placeholder="Name" type="text">
+							</div>
+							<div class="6u$ 12u$(small)">
+								<input name="Stdid" id="Stdid" value="" placeholder="Student ID" type="text">
+							</div>
+							<div class="6u 12u$(small)">
+								<select name="department" id="department" value="" placeholder="Department" >
+								<option value="dp0">Department</option><!----PHP 小於0時不通過---->
+								<option value="Information Management">Information Management</option>
+								<option value="International Bussiness Management">International Bussiness Management</option>
+								<option value="Accounting">Accounting</option>
+								<option value="Statistics">Statistics</option>
+								<option value="Insurance">Insurance</option>
+								<option value="Economics">Economics</option>
+							</select>
+							</div>
+							<div class="6u$ 12u$(small)">
+								<select name="grade" id="grade" value="" placeholder="Grade" >
+								<option value="0">Grade</option><!----PHP 小於0時不通過---->
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+							</select>
+							</div>
+							
+							<div class="12u$">
+								<ul class="actions">
+									<li><input value="Register Now" class="special big" type="submit"></li>
+								</ul>
+							</div>
+						</div>
+					</form>
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="container">
+					<section class="links">
+						<div class="row">
+							<section class="3u 6u$(medium) 12u$(small)">
+								<h3>Academic organization</h3>
+								<ul class="unstyled">
+									<li><a href="http://www.tku.edu.tw/">Tamkang Unverisity</a></li>
+									<li><a href="http://www.im.tku.edu.tw/">Department of Information Management Tamkang Unverisity</a></li>
+									<li><a href="https://www.facebook.com/tkuico">TKU ICO Facebook</a></li>
+									<li><a href="https://www.facebook.com/TKUB310">TKU B310 Laboratory</a></li>
+								</ul>
+							</section>
+							<section class="3u 6u$(medium) 12u$(small)">
+								<h3>Academic organization</h3>
+								<ul class="unstyled">
+									<li><a href="https://hitcon.org/2016/">Hitcon 2016</a></li>
+									<li><a href="https://www.sinica.edu.tw/index.shtml">Academia Sinica</a></li>
+									<li><a href="http://www.iii.org.tw/">Insitute For Information Industry</a></li>
+									<li><a href="http://sitcon.org/2016/#target-home">Sitcon 2016</a></li>
+								</ul>
+							</section>
+							<section class="3u 6u$(medium) 12u$(small)">
+								<h3>Friends Of ICO</h3>
+								<ul class="unstyled">
+									<li><a href="http://chenbolin84.pixnet.net/blog">Chenbolin Blog</a></li>
+									<li><a href="http://hacktku.org/2016/">Hack TKU</a></li>
+									<li><a href="https://www.facebook.com/HackathonTaiwan/?fref=ts">Hackathon Taiwan</a></li>
+									<li><a href="http://sitcon.org/2016/#target-home">Sitcon 2015</a></li>
+								</ul>
+							</section>
+							<section class="3u 6u$(medium) 12u$(small)">
+								<h3>Friends Of ICO</h3>
+								<ul class="unstyled">
+									<li><a href="http://hacktku.org/2015/">Hack TKU 2015</a></li>
+									<li><a href="http://mail.im.tku.edu.tw/~jschang/">Jschang Web</a></li>
+									<li><a href="https://www.microsoft.com/zh-tw">Microsoft</a></li>
+									<li><a href="http://dsv.su.se/en/">Department of Computer and System Sciences,DSV</a></li>
+								</ul>
+							</section>
+						</div>
+					</section>
+					<div class="row">
+						<div class="8u 12u$(medium)">
+							<ul class="copyright">
+								<li>Information Consultant Organization, Tamkang University. All rights reserved.</li>
+							</ul>
+						</div>
+						<div class="4u$ 12u$(medium)">
+							<ul class="icons">
+								<li>
+									<a href ="https://www.facebook.com/tkuico" class="icon rounded fa-facebook"><span class="label">Facebook</span></a>
+								</li>
+								<li>
+									<a href="https://twitter.com/?lang=zh-tw" class="icon rounded fa-twitter"><span class="label">Twitter</span></a>
+								</li>
+								<li>
+									<a href="https://plus.google.com/collections/featured"class="icon rounded fa-google-plus"><span class="label">Google+</span></a>
+								</li>
+								<li>
+									<a href="http://websta.me/n/jenweihsu" class="icon rounded fa-linkedin"><span class="label">LinkedIn</span></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</footer>
+			<script>
+								$(window).load(function(){
+								        $('#loading').hide(2000);
+								        });
+								</script>
+	</body>
+</html>
